@@ -10,13 +10,4 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>io.jenetics</groupId>
-            <artifactId>jpx</artifactId>
-            <version>1.2.3</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/lib/jpx-1.2.3.jar</systemPath>
-        </dependency>
-    </dependencies>
 </project>
