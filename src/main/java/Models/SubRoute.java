@@ -5,7 +5,7 @@ import java.util.List;
 public class SubRoute {
     private String countryCode; //Country the car is driving in
     private String resourcePath;
-    private List<TransLocation> TransLocations;
+    private List<Coordinate> coordinates;
 
     public SubRoute(String countryCode, String resourcePath) {
         this.countryCode = countryCode;
@@ -26,5 +26,9 @@ public class SubRoute {
 
     public void setResourcePath(String resourcePath) {
         this.resourcePath = resourcePath;
+    }
+
+    public void addCoordinate(Coordinate coor) {
+        this.coordinates.add(coor);
     }
 }

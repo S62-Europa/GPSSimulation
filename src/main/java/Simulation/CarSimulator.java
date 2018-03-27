@@ -1,6 +1,7 @@
 package Simulation;
 
 import Models.Car;
+import Models.Coordinate;
 import Models.Route;
 
 import java.io.*;
@@ -13,6 +14,7 @@ import Models.SubRoute;
 import io.jenetics.jpx.GPX;
 import io.jenetics.jpx.Track;
 import io.jenetics.jpx.TrackSegment;
+import io.jenetics.jpx.WayPoint;
 import org.json.*;
 
 public class CarSimulator {
@@ -25,7 +27,7 @@ public class CarSimulator {
         routes = new ArrayList<>();
         loadCarsFromJson();
         loadRoutesFromGPX();
-        generateTransLocations();
+        generateCoords();
     }
 
     private void loadCarsFromJson() {
@@ -73,20 +75,26 @@ public class CarSimulator {
         }
     }
 
-    private void generateTransLocations() {
+    private void generateCoords() {
         for (Route r : routes) {
             for (SubRoute sr : r.getSubRoutes()) {
                 try {
-                    final GPX gpx = GPX.read("");
-                    Stream stream = gpx.tracks()
+                    final GPX gpx = GPX.read(sr.getResourcePath());
+                        gpx.tracks()
                             .flatMap(Track::segments)
-                            .flatMap(TrackSegment::points);
+                            .flatMap(TrackSegment::points)
+                            .forEach(coord->saveCoords(sr, coord));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
             }
         }
+    }
+
+    private static void saveCoords(SubRoute sr, WayPoint coord) {
+        sr.addCoordinate(new Coordinate(coord.getLatitude().doubleValue(), coord.getLongitude().doubleValue()));
+        //System.out.println("sr = " + sr.getResourcePath());
+        //System.out.println(coord.getLatitude() + " - " + coord.getLongitude());
     }
 
     public void startSimulation() {
