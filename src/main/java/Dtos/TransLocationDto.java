@@ -1,8 +1,8 @@
 package Dtos;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class TransLocationDto {
+public class TransLocationDto implements Serializable {
     private String serialNumber;
     private String lat;
     private String lon;

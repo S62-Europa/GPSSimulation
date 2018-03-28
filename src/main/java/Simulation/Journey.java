@@ -8,18 +8,19 @@ import Models.SubRoute;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
 public class Journey extends Thread {
     private CarSimulator carSimulator;
+    private MessageProducer messageProducer;
     private Car car;
     private Route route;
 
-    public Journey(CarSimulator carSimulator, Car car, Route route) {
+    public Journey(CarSimulator carSimulator, MessageProducer messageProducer, Car car, Route route) {
         this.carSimulator = carSimulator;
+        this.messageProducer = messageProducer;
         this.car = car;
         this.route = route;
     }
@@ -43,8 +44,10 @@ public class Journey extends Thread {
                             coor.getLon().toString(),
                             getDateTimeNowIso8601UTC(),
                             car.getOriginCountry());
+                    messageProducer.sendTransLocation(dto);
 
                     System.out.println("Lat: " + coor.getLat() + " - Lon: " + coor.getLon());
+
                     Thread.sleep(1000);
                 }
 
@@ -52,7 +55,7 @@ public class Journey extends Thread {
                     this.route = carSimulator.getNewRoute();
                 }
             }
-        } catch(InterruptedException e) {
+        } catch(Exception e) {
             System.out.println("sleep interrupted");
         }
         System.out.println("Einde thread zou niet mogelijk moeten zijn...");

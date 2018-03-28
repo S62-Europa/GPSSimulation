@@ -23,12 +23,14 @@ public class CarSimulator {
     private List<Route> routes;
     private List<Thread> journeys;
     private Random rndm;
+    private MessageProducer messageProducer;
 
     public CarSimulator() {
         cars = new ArrayList<>();
         routes = new ArrayList<>();
         journeys = new ArrayList<>();
         rndm = new Random();
+        messageProducer = new MessageProducer();
         loadCarsFromJson();
         loadRoutesFromGPX();
         generateCoords();
@@ -102,7 +104,7 @@ public class CarSimulator {
 
         for (Car c : cars){
             int rndmRouteIndex = rndm.nextInt(routes.size());
-            Journey journey = new Journey(this, c, routes.get(rndmRouteIndex));
+            Journey journey = new Journey(this, messageProducer, c, routes.get(rndmRouteIndex));
             journeys.add(journey);
         }
     }
@@ -115,9 +117,10 @@ public class CarSimulator {
         return route;
     }
 
-    public void startSimulation() {
+    public void startSimulation() throws InterruptedException {
         for (Thread t : journeys){
             t.start();
+            Thread.sleep((rndm.nextInt(10 - 1 + 1) + 1) * 1000);
         }
     }
 }
