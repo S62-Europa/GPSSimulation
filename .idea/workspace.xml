@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="056408f9-11c5-481c-89ff-ec87818f2c76" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/res/routes/1/A-NL.gpx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/routes/2/A-NL.gpx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/Route.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Models/SubRoute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Models/SubRoute.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Simulation/CarSimulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Simulation/CarSimulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Simulation/Journey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Simulation/Journey.java" afterDir="false" />
-    </list>
+    <list default="true" id="056408f9-11c5-481c-89ff-ec87818f2c76" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,8 +93,8 @@
       <file leaf-file-name="Journey.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/Journey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="303">
+              <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,7 +106,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -361,12 +352,12 @@
       <workItem from="1522142221769" duration="13494000" />
       <workItem from="1522158714244" duration="591000" />
       <workItem from="1522222850331" duration="610000" />
-      <workItem from="1522231435449" duration="6384000" />
+      <workItem from="1522231435449" duration="7006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21079000" />
+    <option name="totallyTimeSpent" value="21701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -719,7 +710,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -787,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/Journey.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="303">
+          <caret line="51" column="24" lean-forward="true" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
