@@ -21,10 +21,20 @@ public class Route {
 
     private String routeNumber;
     private List<SubRoute> subRoutes; //All the GPX files that make 1 route
+    private boolean routeDriven;
 
     public Route(String routeNumber, List<SubRoute> subRoutes) {
         this.routeNumber = routeNumber;
         this.subRoutes = subRoutes;
+        this.routeDriven = false;
+    }
+
+    public boolean isRouteDriven() {
+        return routeDriven;
+    }
+
+    public void setRouteDriven(boolean routeDriven) {
+        this.routeDriven = routeDriven;
     }
 
     public List<SubRoute> getSubRoutes() {
