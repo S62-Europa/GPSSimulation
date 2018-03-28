@@ -33,7 +33,7 @@ public class SubRoute {
     }
 
     public Coordinate getNextCoordinateAtIndex(int index){
-        if (index > coordinates.size()){
+        if (index >= coordinates.size()){
             this.subRouteDriven = true;
             return null;
         }

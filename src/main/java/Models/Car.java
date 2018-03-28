@@ -28,6 +28,10 @@ public class Car {
         return serialNumber;
     }
 
+    public String getOriginCountry() {
+        return originCountry;
+    }
+
     @Override
     public String toString() {
         return this.serialNumber + " " + this.originCountry;

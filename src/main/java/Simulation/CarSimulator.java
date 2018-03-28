@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import Models.SubRoute;
 import io.jenetics.jpx.GPX;
@@ -23,11 +22,13 @@ public class CarSimulator {
     private List<Car> cars;
     private List<Route> routes;
     private List<Thread> journeys;
+    private Random rndm;
 
     public CarSimulator() {
         cars = new ArrayList<>();
         routes = new ArrayList<>();
         journeys = new ArrayList<>();
+        rndm = new Random();
         loadCarsFromJson();
         loadRoutesFromGPX();
         generateCoords();
@@ -98,18 +99,25 @@ public class CarSimulator {
     }
 
     private void createJourneys() {
-        Random rndm = new Random();
+
         for (Car c : cars){
             int rndmRouteIndex = rndm.nextInt(routes.size());
-            Journey journey = new Journey(c, routes.get(rndmRouteIndex));
+            Journey journey = new Journey(this, c, routes.get(rndmRouteIndex));
             journeys.add(journey);
         }
+    }
+
+    public Route getNewRoute() {
+        int rndmRouteIndex = rndm.nextInt(routes.size());
+        Route route = routes.get(rndmRouteIndex);
+        route.setRouteDriven(false);
+        route.setAllSubRoutesToFalse();
+        return route;
     }
 
     public void startSimulation() {
         for (Thread t : journeys){
             t.start();
         }
-        //Every car has to start.
     }
 }

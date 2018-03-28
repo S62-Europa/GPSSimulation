@@ -4,8 +4,16 @@ import java.util.Date;
 
 public class TransLocationDto {
     private String serialNumber;
-    private Double lat;
-    private Double lon;
-    private Date timestamp;
-    private Date countryCode; //Country the car is driving in
+    private String lat;
+    private String lon;
+    private String timestamp;
+    private String countryCode; //Country the car is driving in
+
+    public TransLocationDto(String serialNumber, String lat, String lon, String timestamp, String countryCode) {
+        this.serialNumber = serialNumber;
+        this.lat = lat;
+        this.lon = lon;
+        this.timestamp = timestamp;
+        this.countryCode = countryCode;
+    }
 }

@@ -37,6 +37,12 @@ public class Route {
         this.routeDriven = routeDriven;
     }
 
+    public void setAllSubRoutesToFalse(){
+        for (SubRoute sr : subRoutes){
+            sr.setSubRouteDriven(false);
+        }
+    }
+
     public List<SubRoute> getSubRoutes() {
         return subRoutes;
     }
