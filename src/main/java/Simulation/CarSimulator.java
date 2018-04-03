@@ -3,19 +3,26 @@ package Simulation;
 import Models.Car;
 import Models.Coordinate;
 import Models.Route;
-
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-
 import Models.SubRoute;
+import Simulation.Listener.SimulationListener;
+import Simulation.Listener.SimulationListenerBuilder;
+import com.google.gson.Gson;
 import io.jenetics.jpx.GPX;
 import io.jenetics.jpx.Track;
 import io.jenetics.jpx.TrackSegment;
 import io.jenetics.jpx.WayPoint;
-import org.json.*;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.json.JSONTokener;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
 public class CarSimulator {
 
@@ -122,5 +129,17 @@ public class CarSimulator {
             t.start();
             Thread.sleep((rndm.nextInt(10 - 1 + 1) + 1) * 1000);
         }
+    }
+
+    public void createListener() {
+        SimulationListener sl = SimulationListenerBuilder
+                .createBuilder("FI")
+                .setServerAddress("localhost")
+                .setListener(transLocationDto -> {
+                    System.out.println("Received translocation from server");
+                    System.out.println(new Gson().toJson(transLocationDto));
+                })
+                .build();
+
     }
 }
