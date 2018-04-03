@@ -1,10 +1,14 @@
 package Simulation;
 
 import Dtos.TransLocationDto;
+import com.google.gson.Gson;
 
-import java.io.*;
+import java.nio.charset.Charset;
 
 public class MessageProducer {
+
+    public static Charset UTF8 = Charset.forName("UTF-8");
+
     private Gateway simulationToRegistration;
 
     public MessageProducer(){
@@ -16,11 +20,8 @@ public class MessageProducer {
         System.out.println("Simulation has send the payload to the queue at SimulationToRegistration.");
     }
 
-    private byte[] convertPayLoadToBytes(Object payload) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        ObjectOutputStream writter = new ObjectOutputStream(baos);
-        writter.writeObject(payload);
-        return baos.toByteArray();
+    private byte[] convertPayLoadToBytes(Object payload) {
+        return new Gson().toJson(payload).getBytes(UTF8);
     }
 
     private void startSimulationToRegistration(){
