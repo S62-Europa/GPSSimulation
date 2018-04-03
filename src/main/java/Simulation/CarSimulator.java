@@ -40,7 +40,7 @@ public class CarSimulator {
     private void loadCarsFromJson() {
         JSONArray jsonarray = null;
         try {
-            jsonarray = new JSONArray(new JSONTokener(new FileReader("res/cars/cars.json")));
+            jsonarray = new JSONArray(new JSONTokener(new FileReader("res/trackers/trackers.json")));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

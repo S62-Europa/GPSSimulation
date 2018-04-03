@@ -1,6 +1,7 @@
 package Simulation;
 
 import Dtos.TransLocationDto;
+import org.json.JSONObject;
 
 import java.io.*;
 
@@ -12,11 +13,12 @@ public class MessageProducer {
     }
 
     public void sendTransLocation(TransLocationDto dto) throws Exception {
-        simulationToRegistration.channel.basicPublish("", "SimulationToRegistration", null, convertPayLoadToBytes(dto));
+        JSONObject jsonObj = new JSONObject(dto);
+        simulationToRegistration.channel.basicPublish("", "SimulationToRegistration", null, convertPayLoadToBytes(jsonObj.toString()));
         System.out.println("Simulation has send the payload to the queue at SimulationToRegistration.");
     }
 
-    private byte[] convertPayLoadToBytes(Object payload) throws IOException {
+    private byte[] convertPayLoadToBytes(String payload) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream writter = new ObjectOutputStream(baos);
         writter.writeObject(payload);

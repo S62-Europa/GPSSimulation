@@ -16,4 +16,16 @@ public class TransLocationDto implements Serializable {
         this.timestamp = timestamp;
         this.countryCode = countryCode;
     }
+
+    public String getSerialNumber() {
+        return serialNumber;
+    }
+
+    public String getLat() {
+        return lat;
+    }
+
+    public String getLon() {
+        return lon;
+    }
 }
