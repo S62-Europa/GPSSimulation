@@ -45,7 +45,7 @@ public class Journey extends Thread {
                             coor.getLon().toString(),
                             getDateTimeNowIso8601UTC(),
                             car.getOriginCountry());
-                    messageProducer.sendTransLocation(dto);
+                    messageProducer.sendTransLocation(sr.getCountryCode(), dto);
 
                     System.out.println("Lat: " + coor.getLat() + " - Lon: " + coor.getLon());
 

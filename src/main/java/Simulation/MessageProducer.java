@@ -6,16 +6,43 @@ import org.json.JSONObject;
 import java.io.*;
 
 public class MessageProducer {
-    private Gateway simulationToRegistration;
+    private Gateway SimulationToItaly;
+    private Gateway SimulationToGermany;
+    private Gateway SimulationToTheNetherlands;
+    private Gateway SimulationToBelgium;
+    private Gateway SimulationToFinland;
 
     public MessageProducer(){
-        startSimulationToRegistration();
+        startSimulationToBelgium();
+        startSimulationToFinland();
+        startSimulationToGermany();
+        startSimulationToItaly();
+        startSimulationToTheNetherlands();
     }
 
-    public void sendTransLocation(TransLocationDto dto) throws Exception {
+    public void sendTransLocation(String countryCode, TransLocationDto dto) throws Exception {
         JSONObject jsonObj = new JSONObject(dto);
-        simulationToRegistration.channel.basicPublish("", "SimulationToRegistration", null, convertPayLoadToBytes(jsonObj.toString()));
-        System.out.println("Simulation has send the payload to the queue at SimulationToRegistration.");
+
+        switch (countryCode){
+            case "IT":
+                SimulationToItaly.channel.basicPublish("", "SimulationToItaly", null, convertPayLoadToBytes(jsonObj.toString()));
+                break;
+            case "DE":
+                SimulationToItaly.channel.basicPublish("", "SimulationToGermany", null, convertPayLoadToBytes(jsonObj.toString()));
+                break;
+            case "NL":
+                SimulationToItaly.channel.basicPublish("", "SimulationToTheNetherlands", null, convertPayLoadToBytes(jsonObj.toString()));
+                break;
+            case "BE":
+                SimulationToItaly.channel.basicPublish("", "SimulationToBelgium", null, convertPayLoadToBytes(jsonObj.toString()));
+                break;
+            case "FI":
+                SimulationToItaly.channel.basicPublish("", "SimulationToFinland", null, convertPayLoadToBytes(jsonObj.toString()));
+                break;
+            default:
+                throw new Exception();
+        }
+        System.out.println("Simulation has send the payload to the queue.");
     }
 
     private byte[] convertPayLoadToBytes(String payload) throws IOException {
@@ -25,10 +52,46 @@ public class MessageProducer {
         return baos.toByteArray();
     }
 
-    private void startSimulationToRegistration(){
+    private void startSimulationToItaly(){
         try {
-            simulationToRegistration = new Gateway();
-            simulationToRegistration.channel.queueDeclare("SimulationToRegistration", false, false, false, null);
+            SimulationToItaly = new Gateway();
+            SimulationToItaly.channel.queueDeclare("SimulationToItaly", false, false, false, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startSimulationToGermany(){
+        try {
+            SimulationToGermany = new Gateway();
+            SimulationToGermany.channel.queueDeclare("SimulationToGermany", false, false, false, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startSimulationToTheNetherlands(){
+        try {
+            SimulationToTheNetherlands = new Gateway();
+            SimulationToTheNetherlands.channel.queueDeclare("SimulationToTheNetherlands", false, false, false, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startSimulationToBelgium(){
+        try {
+            SimulationToBelgium = new Gateway();
+            SimulationToBelgium.channel.queueDeclare("SimulationToBelgium", false, false, false, null);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void startSimulationToFinland(){
+        try {
+            SimulationToFinland = new Gateway();
+            SimulationToFinland.channel.queueDeclare("SimulationToFinland", false, false, false, null);
         } catch (Exception e) {
             e.printStackTrace();
         }

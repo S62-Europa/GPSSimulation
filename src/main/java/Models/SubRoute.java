@@ -32,6 +32,10 @@ public class SubRoute {
         this.coordinates.add(coor);
     }
 
+    public String getCountryCode() {
+        return countryCode;
+    }
+
     public Coordinate getNextCoordinateAtIndex(int index){
         if (index >= coordinates.size()){
             this.subRouteDriven = true;
