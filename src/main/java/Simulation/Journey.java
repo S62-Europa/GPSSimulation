@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
 
 public class Journey extends Thread {
     private CarSimulator carSimulator;
@@ -52,11 +53,13 @@ public class Journey extends Thread {
                 }
 
                 if (route.isRouteDriven()){
+                    System.out.println("Thread sleeping for 15 minutes");
+                    TimeUnit.MINUTES.sleep(15);
                     this.route = carSimulator.getNewRoute();
                 }
             }
         } catch(Exception e) {
-            System.out.println("sleep interrupted");
+            System.out.println("interrupted");
         }
         System.out.println("Einde thread zou niet mogelijk moeten zijn...");
     }
