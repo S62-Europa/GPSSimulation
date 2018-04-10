@@ -2,117 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="056408f9-11c5-481c-89ff-ec87818f2c76" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimulatieSysteemERR.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatieSysteemERR.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Simulation/Journey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Simulation/Journey.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Bounds.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Copyright.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/DGPSStation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Degrees.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Email.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Filter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Filters.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Fix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Format.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/GPX.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/IO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/IndentingXMLWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Latitude.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Length.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Link.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Lists.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Longitude.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Metadata.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/NonNullList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Point.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Route.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Serial.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Speed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/Track.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/TrackSegment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/UInt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/WayPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/XMLReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/XMLWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/XMLWriterProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/ZonedDateTimeFormat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/ZonedDateTimes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/geom/DoubleAdder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/geom/Ellipsoid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/geom/Geoid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/geom/LengthCollector.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/jenetics/jpx/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Simulation/Journey.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Simulation/Journey.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/AttrReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Bounds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Copyright.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/DGPSStation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Degrees.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ElemReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Email.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Filter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Filters.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Fix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Format.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX$Builder$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX$Builder$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX$Builder$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/GPX.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/IO$Reader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/IO$Writer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/IO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/IndentingXMLWriter$State.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/IndentingXMLWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Latitude.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Length$Unit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Length.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Link.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ListReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ListResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Lists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Longitude.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Metadata$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Metadata$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Metadata.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/NonNullList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/NonNullList$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/NonNullList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Point.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ReaderResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Route$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Route$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Route.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Serial.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Speed$Unit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Speed.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/TextReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Track$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Track$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/Track.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/TrackSegment$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/TrackSegment$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/TrackSegment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/UInt.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ValueResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/WayPoint$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/WayPoint$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/WayPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/XMLReader$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/XMLReader$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/XMLReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/XMLWriter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/XMLWriterProxy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ZonedDateTimeFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/ZonedDateTimes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/geom/DoubleAdder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/geom/Ellipsoid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/geom/Geoid.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/jenetics/jpx/geom/LengthCollector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -149,11 +39,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TransLocationDto.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TransLocationDto.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            <state relative-caret-position="425">
+              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+              <folding>
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#852#853#0" expanded="true" />
+                <element signature="e#886#887#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,8 +95,8 @@
       <file leaf-file-name="MessageProducer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/MessageProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
+            <state relative-caret-position="170">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -215,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="146">
               <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
             </state>
           </provider>
@@ -260,10 +155,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Models/Coordinate.java" />
         <option value="$PROJECT_DIR$/res/cars/cars.json" />
         <option value="$PROJECT_DIR$/src/main/java/Simulation/CarSimulator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/Simulation/MessageProducer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Simulation/Journey.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java" />
       </list>
     </option>
   </component>
@@ -280,9 +175,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1920" />
-    <option name="height" value="1059" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -364,7 +259,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ERRInterfacesGit" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MovementRegistrationGit" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
@@ -480,16 +375,15 @@
       <workItem from="1522761183051" duration="2871000" />
       <workItem from="1522764465030" duration="4000" />
       <workItem from="1522779941966" duration="4072000" />
-      <workItem from="1523350561230" duration="1050000" />
+      <workItem from="1523350561230" duration="3491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35928000" />
+    <option name="totallyTimeSpent" value="38369000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -505,14 +399,14 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -802,13 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/MessageProducer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="30" column="71" selection-start-line="30" selection-start-column="71" selection-end-line="30" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/Start.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -826,13 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/CarSimulator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -842,8 +722,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="146">
           <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Simulation/MessageProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Dtos/TransLocationDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#886#887#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
