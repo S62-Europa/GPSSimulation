@@ -1,12 +1,12 @@
 package Models;
 
 import Dtos.TransLocationDto;
-
 import java.util.Timer;
 
 public class Car {
     private String serialNumber;
     private Timer timer;
+    private double speedInKmH = 80;
     private String originCountry;
 
     public Car(String serialNumber, String originCountry) {
@@ -32,6 +32,14 @@ public class Car {
         return originCountry;
     }
 
+    public double getSpeed(){
+        return speedInKmH;
+    }
+    
+    public void setSpeed(double newSpeed){
+        speedInKmH = newSpeed;
+    }
+    
     @Override
     public String toString() {
         return this.serialNumber + " " + this.originCountry;

@@ -31,7 +31,6 @@ public class Journey extends Thread {
                 SubRoute sr = findSubRouteThatIsNotDrivenYet();
  
                 Coordinate previousCoor = null;
-                Date previousDateTime = null;
                                 
                 int indexesTravelled = 0;
                 while (!sr.isSubRouteDriven()){
@@ -41,6 +40,16 @@ public class Journey extends Thread {
  
                     if (coor == null) break;
                      
+                    System.out.println("Lat: " + coor.getLat() + " - Lon: " + coor.getLon());
+                    if(previousCoor != null)
+                    {
+                        double distBetweenPoints = distance(previousCoor.getLat(), previousCoor.getLon(), coor.getLat(), coor.getLon());
+                        System.out.println("Distance to previous point is " + distBetweenPoints);
+                        double secondsTillNextCoor = distBetweenPoints / this.car.getSpeed() / 3600;
+                        System.out.println(secondsTillNextCoor + " seconds until next point is reached!");
+                    }
+                    previousCoor = coor;
+                                        
                     //Deze dto naar RabbitMQ
                     TransLocationDto dto = new TransLocationDto(
                             car.getSerialNumber(),
@@ -50,12 +59,7 @@ public class Journey extends Thread {
                             car.getOriginCountry());
                     messageProducer.sendTransLocation(sr.getCountryCode(), dto);
  
-                    System.out.println("Lat: " + coor.getLat() + " - Lon: " + coor.getLon());
-                    if(previousCoor != null)
-                        System.out.println("Speed is " + getSpeedFromCoords(previousCoor, coor, previousDateTime.getTime(), currentDateTime.getTime()) + " km/h");
-                    previousCoor = coor;
-                    previousDateTime = currentDateTime;
-                    
+                    System.out.println();
                     Thread.sleep(1000);
                 }
  
@@ -65,65 +69,52 @@ public class Journey extends Thread {
                     this.route = carSimulator.getNewRoute();
                 }
             }
-        } catch(Exception e) {
+        } catch (Exception e) {
             System.out.println("interrupted");
         }
         System.out.println("Einde thread zou niet mogelijk moeten zijn...");
     }
- 
-    private String getDateTimeNowIso8601UTC(){
+
+    private String getDateTimeNowIso8601UTC() {
         TimeZone tz = TimeZone.getTimeZone("UTC");
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
         df.setTimeZone(tz);
         return df.format(new Date());
     }
- 
-    private SubRoute findSubRouteThatIsNotDrivenYet(){
+
+    private SubRoute findSubRouteThatIsNotDrivenYet() {
         List<SubRoute> srs = route.getSubRoutes();
-                for (SubRoute sr : srs){
-            if (!sr.isSubRouteDriven()){
+        for (SubRoute sr : srs) {
+            if (!sr.isSubRouteDriven()) {
                 return sr;
             }
         }
         route.setRouteDriven(true);
         return srs.get(srs.size() - 1);
     }
-    
-    private static double getSpeedFromCoords(Coordinate start, Coordinate end, long startTime, long endTime){
-        
-  // Convert degrees to radians
-  double lat1 = start.getLat() * Math.PI / 180.0;
-  double lon1 = start.getLon() * Math.PI / 180.0;
- 
-  double lat2 = end.getLat() * Math.PI / 180.0;
-  double lon2 = end.getLon() * Math.PI / 180.0;
- 
-  // radius of earth in metres
-  double r = 6378100;
- 
-  // P
-  double rho1 = r * Math.cos(lat1);
-  double z1 = r * Math.sin(lat1);
-  double x1 = rho1 * Math.cos(lon1);
-  double y1 = rho1 * Math.sin(lon1);
- 
-  // Q
-  double rho2 = r * Math.cos(lat2);
-  double z2 = r * Math.sin(lat2);
-  double x2 = rho2 * Math.cos(lon2);
-  double y2 = rho2 * Math.sin(lon2);
- 
-  // Dot product
-  double dot = (x1 * x2 + y1 * y2 + z1 * z2);
-  double cos_theta = dot / (r * r);
- 
-  double theta = Math.acos(cos_theta);
- 
-  // Distance in Metres
-  double distInMeters = r * theta;
-        double speed_mps = distInMeters / (endTime - startTime);
-        double speed_kph = (speed_mps * 3600.0) / 1000.0;
-        return speed_kph;
+
+    private double distance(double lat1, double lon1, double lat2, double lon2) {
+      double theta = lon1 - lon2;
+      double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+      dist = Math.acos(dist);
+      dist = rad2deg(dist);
+      dist = dist * 60 * 1.1515;
+      
+      return (dist);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    /*::  This function converts decimal degrees to radians             :*/
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    private double deg2rad(double deg) {
+      return (deg * Math.PI / 180.0);
+    }
+
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    /*::  This function converts radians to decimal degrees             :*/
+    /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+    private double rad2deg(double rad) {
+      return (rad * 180.0 / Math.PI);
     }
 }
  
